@@ -1,0 +1,155 @@
+.destination-card {
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.destination-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.destination-card-image-container {
+  position: relative;
+  height: 200px;
+  overflow: hidden;
+}
+
+.destination-card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.destination-card:hover .destination-card-image {
+  transform: scale(1.05);
+}
+
+.destination-card-content {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.destination-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 0.5rem;
+}
+
+.destination-card-title {
+  font-size: 1.25rem;
+  margin: 0;
+  flex: 1;
+}
+
+.destination-card-title a {
+  color: var(--dark-color);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.destination-card-title a:hover {
+  color: var(--primary-color);
+}
+
+.destination-card-rating {
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  color: var(--dark-color);
+}
+
+.star {
+  color: var(--secondary-color);
+  margin-right: 4px;
+}
+
+.destination-card-location {
+  color: var(--text-light);
+  font-size: 0.9rem;
+  margin-bottom: 0.75rem;
+}
+
+.destination-card-description {
+  color: var(--text-color);
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
+  flex: 1;
+}
+
+.destination-card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+}
+
+.destination-card-price {
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: var(--primary-color);
+}
+
+.btn-sm {
+  padding: 8px 16px;
+  font-size: 0.9rem;
+}
+
+.wishlist-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: white;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  z-index: 2;
+}
+
+.wishlist-button svg {
+  width: 20px;
+  height: 20px;
+  color: var(--accent-color);
+}
+
+.wishlist-button.active {
+  background-color: var(--accent-color);
+}
+
+.wishlist-button.active svg {
+  color: white;
+}
+
+.wishlist-button:hover {
+  transform: scale(1.1);
+}
+
+@media (max-width: 576px) {
+  .destination-card-image-container {
+    height: 180px;
+  }
+  
+  .destination-card-content {
+    padding: 1rem;
+  }
+  
+  .destination-card-title {
+    font-size: 1.1rem;
+  }
+}

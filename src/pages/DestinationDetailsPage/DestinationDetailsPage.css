@@ -1,0 +1,273 @@
+.destination-details-page {
+  min-height: 100vh;
+}
+
+.destination-header {
+  background-color: var(--dark-color);
+  color: white;
+  padding: 3rem 0;
+}
+
+.destination-header-content {
+  text-align: center;
+}
+
+.destination-header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.destination-meta {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.destination-location,
+.destination-rating {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.1rem;
+}
+
+.icon {
+  font-size: 1.2rem;
+}
+
+.destination-content {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 2rem;
+  margin: 3rem 0;
+}
+
+.destination-main {
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  padding: 2rem;
+}
+
+.destination-description {
+  margin: 2rem 0;
+}
+
+.destination-description h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: var(--dark-color);
+}
+
+.destination-description p {
+  line-height: 1.8;
+  color: var(--text-color);
+}
+
+.destination-features {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin: 2rem 0;
+  padding: 2rem 0;
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.feature h3 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  color: var(--dark-color);
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  list-style: none;
+  padding: 0;
+}
+
+.tag {
+  background-color: #f8f9fa;
+  padding: 0.4rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+}
+
+.destination-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.booking-card,
+.weather-card {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+  padding: 2rem;
+}
+
+.booking-price {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.price {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--primary-color);
+}
+
+.price-note {
+  display: block;
+  font-size: 0.9rem;
+  color: var(--text-light);
+  margin-top: 0.5rem;
+}
+
+.btn-block {
+  display: block;
+  width: 100%;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.booking-info {
+  margin-top: 2rem;
+  border-top: 1px solid var(--border-color);
+  padding-top: 1.5rem;
+}
+
+.info-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.info-label {
+  color: var(--text-light);
+}
+
+.info-value {
+  font-weight: 600;
+}
+
+.weather-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  color: var(--dark-color);
+}
+
+.weather-card > p {
+  margin-bottom: 1.5rem;
+  color: var(--text-light);
+}
+
+.weather-seasons {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.weather-season {
+  padding: 1rem;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+}
+
+.weather-season h4 {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  color: var(--dark-color);
+}
+
+.weather-season p {
+  font-size: 0.9rem;
+  color: var(--text-color);
+}
+
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 50vh;
+}
+
+.loading-spinner {
+  width: 50px;
+  height: 50px;
+  border: 5px solid #f3f3f3;
+  border-top: 5px solid var(--primary-color);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 1rem;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.not-found {
+  text-align: center;
+  padding: 5rem 0;
+}
+
+.not-found h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: var(--dark-color);
+}
+
+.not-found p {
+  margin-bottom: 2rem;
+  color: var(--text-light);
+}
+
+@media (max-width: 992px) {
+  .destination-content {
+    grid-template-columns: 1fr;
+  }
+  
+  .destination-sidebar {
+    order: -1;
+  }
+  
+  .booking-card {
+    position: sticky;
+    top: 100px;
+  }
+}
+
+@media (max-width: 768px) {
+  .destination-header {
+    padding: 2rem 0;
+  }
+  
+  .destination-header h1 {
+    font-size: 2rem;
+  }
+  
+  .destination-meta {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .destination-features {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 576px) {
+  .destination-main {
+    padding: 1.5rem;
+  }
+  
+  .weather-seasons {
+    grid-template-columns: 1fr;
+  }
+}

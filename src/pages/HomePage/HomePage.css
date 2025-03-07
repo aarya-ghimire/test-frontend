@@ -1,0 +1,106 @@
+.home-page {
+  min-height: 100vh;
+}
+
+.popular-destinations {
+  padding: 5rem 0;
+  background-color: white;
+}
+
+.destination-categories {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.destination-category {
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.destination-category:hover {
+  transform: translateY(-10px);
+}
+
+.category-image {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  box-shadow: var(--shadow);
+}
+
+.destination-category h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: var(--dark-color);
+}
+
+.destination-category p {
+  color: var(--text-light);
+}
+
+.travel-tips {
+  padding: 5rem 0;
+  background-color: #f8f9fa;
+}
+
+.tips-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.tip-card {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tip-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.tip-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  color: var(--dark-color);
+}
+
+.tip-card p {
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+@media (max-width: 992px) {
+  .destination-categories {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .popular-destinations,
+  .travel-tips {
+    padding: 3rem 0;
+  }
+  
+  .tips-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 576px) {
+  .destination-categories {
+    grid-template-columns: 1fr;
+  }
+  
+  .category-image {
+    height: 200px;
+  }
+}
