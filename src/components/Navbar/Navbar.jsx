@@ -51,6 +51,15 @@ const Navbar = () => {
               Wishlist
             </Link>
           </li>
+          <li className={`navbar-item ${isActive("/add-destination")}`}>
+            <Link
+              to="/add-destination"
+              className="navbar-link add-destination-link"
+              onClick={closeMenu}
+            >
+              + Add Destination
+            </Link>
+          </li>
         </ul>
       </div>
     </nav>
