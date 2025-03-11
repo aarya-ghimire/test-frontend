@@ -7,6 +7,7 @@ import DestinationsPage from "./pages/DestinationsPage/DestinationsPage";
 import DestinationDetailsPage from "./pages/DestinationDetailsPage/DestinationDetailsPage";
 import WishlistPage from "./pages/WishlistPage/WishlistPage";
 import AddDestinationPage from "./pages/AddDestinationPage/AddDestinationPage";
+import LoginPage from "./pages/LoginPage/LoginPage";
 import NotFoundPage from "./pages/NotFoundPage/NotFoundPage";
 import "./App.css";
 
@@ -93,6 +94,7 @@ function App() {
               }
             />
             <Route path="/add-destination" element={<AddDestinationPage />} />
+            <Route path="/login" element={<LoginPage />} />
             <Route path="*" element={<NotFoundPage />} />
           </Routes>
         </main>

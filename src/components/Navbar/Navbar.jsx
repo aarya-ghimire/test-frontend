@@ -60,6 +60,15 @@ const Navbar = () => {
               + Add Destination
             </Link>
           </li>
+          <li className={`navbar-item ${isActive("/login")}`}>
+            <Link
+              to="/login"
+              className="navbar-link login-link"
+              onClick={closeMenu}
+            >
+              Login
+            </Link>
+          </li>
         </ul>
       </div>
     </nav>
